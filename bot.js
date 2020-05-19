@@ -228,6 +228,7 @@ client.on("message", message => {
         let member = message.mentions.members.first();
         let sal = client.users.get('')
         message.delete()
+	db.add(`para_${u.id + message.guild.id}`, 1500);
          const ozelmesajuyari = new Discord.RichEmbed()
         }
     
