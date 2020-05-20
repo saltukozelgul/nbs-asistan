@@ -143,10 +143,10 @@ var oyun = [
         }, 20000);
 
 
-
+app.use(express.static("public"));
 app.get("/", (request, response) => {
+  response.sendFile(__dirname + "/views/index.html");
   console.log(Date.now() + " Ping alındı aktivite devam ediyor.");
-  response.sendStatus(200)
   //response.render(__dirname+'/index.html')
 });
 app.listen(process.env.PORT);
