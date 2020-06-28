@@ -138,6 +138,8 @@ catch (e) {
     .setDescription('Bir hata ile karşılaştık : \n`' + e.message + '`')
     return message.channel.sendEmbed(error);
 }
+  
+  console.log(`Havadurumu Komutu Kullanıldı:`+ `${message.guild.name}`)
     };
 
 exports.conf = {

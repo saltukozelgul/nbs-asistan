@@ -1,0 +1,7 @@
+﻿const Discord = require("discord.js");
+const client = "663430973068804106";
+
+document.write("123")
+
+  
+  

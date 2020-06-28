@@ -5,6 +5,7 @@ const { randomRange, verify } = require("../util/util.js");
 exports.run = async (client, message, args) => {
   var para = db.fetch(`para_${message.author.id + message.guild.id}`);
   let user = message.mentions.users.first();
+  if (user.bot) return message.reply('Botlar ile oynayamazsın!');
   var para2 = db.fetch(`para_${user.id + message.guild.id}`);
   let miktar = parseInt(args[1]);
   if (!miktar) {
@@ -42,6 +43,7 @@ exports.run = async (client, message, args) => {
       db.add(`para_${message.author.id + message.guild.id}`, `-${miktar}`);
     }
   }
+  console.log(`Bet Komutu Kullanıldı:`+ `${message.guild.name}`)
 };
 
 exports.conf = {

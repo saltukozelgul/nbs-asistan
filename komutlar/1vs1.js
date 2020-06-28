@@ -97,7 +97,7 @@ exports.run = async (client, message, args) => {
             const winner = userHP > oppoHP ? message.author : opponent;
 			      message.channel.send(`Oyun bitti! Tebrikler, **${winner}** **10xp** kazandı! \n**${message.author.username}**: ${userHP} :heartpulse: \n**${opponent.username}**: ${oppoHP} :heartpulse:`);
 		        db.add(`puancik_${winner.id + message.guild.id}`, 10);  
-            console.log('Bu komut çalıştı!  ')
+            console.log(`1vs1 atıldı!`+ `${message.guild.name}`)
     } catch (err) {
 			this.fighting.delete(message.channel.id);
 			throw err;

@@ -8,15 +8,18 @@ exports.run = (client, message) => {
     .setColor(0x00AE86)
     .setTimestamp()
     .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('Kendim hakkımda gerekli bilgileri size özelden gönderdim :)');
+    .setDescription('Gerekli bilgileri özelden ilettim.');
     message.channel.sendEmbed(ozelmesajkontrol) }
 	const pingozel = new Discord.RichEmbed()
     .setColor(0x00AE86)
     .setTimestamp()
     .setThumbnail('https://apprecs.org/gp/images/app-icons/300/60/net.bitsized.forgepaladins.jpg')
-    .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('Bot sürümü: v' + 1.2 + ' by Saltuş ');
+    .setAuthor('NBS Asistan Bilgi Menüsü', message.author.avatarURL)
+    .addField('**Bot Sürümü**', 'v0.1')
+    .addField('**Geliştirici**', 'Saltuk Buğra Özelgül')
+    .addField('**Destek Sunucusu**', 'https://discord.gg/fJT4u8x')
     return message.author.sendEmbed(pingozel)
+    console.log(`Bilgi Komutu Kullanıldı:`+ `${message.guild.name}`)
 };
 
 exports.conf = {

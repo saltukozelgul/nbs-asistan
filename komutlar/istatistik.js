@@ -1,6 +1,7 @@
 ﻿const Discord = require("discord.js");
 const moment = require("moment");
 require("moment-duration-format");
+const client = new Discord.Client();
 
 exports.run = (client, msg) => {
   const duration = moment.duration(client.uptime).format(" D [gün], H [saat], m [dakika], s [saniye]");
@@ -14,7 +15,15 @@ exports.run = (client, msg) => {
 • Kanallar         :: ${client.channels.size.toLocaleString()}
 • Discord.JS sürüm :: v${Discord.version}`);
 };
-
+  
+  var simple=function(){
+   var textMultiple = {
+        kanal:`${client.channels.size.toLocaleString()}`,
+        text2:"text2"
+    };
+   return textMultiple;
+}
+  
 exports.conf = {
   enabled: true,
   guildOnly: false,
@@ -27,3 +36,10 @@ exports.help = {
   description: 'Asistanın istatistiklerini gösterir.',
   usage: 'istatistik'
 };
+
+
+exports.stats = {
+  kanal: `${client.channels.size.toLocaleString()}`,
+  sunucular: "",
+  
+}

@@ -7,7 +7,7 @@ exports.run = function(client, message, args) {
    */
   .setColor("RANDOM")
   .setThumbnail('https://images.vexels.com/media/users/3/147101/isolated/preview/b4a49d4b864c74bb73de63f080ad7930-instagram-profile-button-by-vexels.png')
-  .setDescription('**//profil resim <url>**: Profilinizin arkaplanını değiştirir.\n **//profil renk <hexkodu>**: Profiliniz rengini ayarlar \n **//profil saydam [1-5]**: Profilin saydamlığını ayarlar \n **//profil**: Profilinizi gösterir. ')
+  .setDescription('**//profil resim <url> ya da sıfırla**: Profilinizin arkaplanını değiştirir.\n **//profil renk <hexkodu> ya da sıfırla**: Profiliniz rengini ayarlar \n **//profil saydam [1-5] ya da sıfırla**: Profilin saydamlığını ayarlar \n **//profil**: Profilinizi gösterir. ')
   /*
    * Takes a Date object, defaults to current date.
    */

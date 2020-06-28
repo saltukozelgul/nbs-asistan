@@ -13,6 +13,7 @@ exports.run = async (client, message, args) => {
   db.set(`desc_${user.id}`, `${sebep}`);
   message.channel.send(`Profil açıklamanız başarıyla değiştirildi.`);
   message.channel.send(`Yeni açıklaman: \`${sebep}\``);
+  console.log(`Açıklama Komutu Kullanıldı:`+ `${message.guild.name}`)
 };
 
 exports.conf = {

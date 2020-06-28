@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 exports.run = function(client, message, args) {
   const embed = new Discord.RichEmbed()
-  .setAuthor(".d\n")
+  .setAuthor(".d *gklpvi*\n")
   /*
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
    */
   .setColor("#7FFFD4")
-  .setImage("https://media.discordapp.net/attachments/302894113571995649/702168804846993418/komikgklp.jpeg?width=506&height=676")
+  .setImage("https://media.discordapp.net/attachments/342738041187598337/715942837102968862/unknown.png")
   /*
    * Takes a Date object, defaults to current date.
    */
@@ -17,7 +17,7 @@ exports.run = function(client, message, args) {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [],
+  aliases: ['gklpvi'],
   permLevel: 0
 };
 

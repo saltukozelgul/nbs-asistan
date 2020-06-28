@@ -5,17 +5,17 @@ const moment = require("moment");
 exports.run = async (client, message, args) => {
   let user = message.author;
   let sebep = args.join(" ");
-  let sonalim = db.fetch(`gunluk_${user.id}`);
+  let sonalim = db.fetch(`gunluk_${user.id + message.guild.id}`) + `${message.guild.id}`;
   let bugun = moment().format("L");
-  if (sonalim != bugun) {
-    db.set(`gunluk_${user.id}`, bugun);
-    console.log("son alma tarihi güncellendi!");
+  if (sonalim != bugun + `${message.guild.id}`) {
+    db.set(`gunluk_${user.id + message.guild.id}`, bugun);
+    console.log("Son alma tarihi güncellendi!");
     const basarili = new Discord.RichEmbed().setDescription(
       `**Günlük kredin olan 200₺ hesabına aktarıldı**`
     );
     message.channel.send(basarili);
     db.add(`para_${message.author.id + message.guild.id}`, 200);
-  } else if (sonalim == bugun) {
+  } else if (sonalim == bugun + `${message.guild.id}`) {
     console.log(sonalim);
     const hatali = new Discord.RichEmbed()
       .setDescription(`\n \n **Bugün zaten günlük kredini aldın!**`)
@@ -24,6 +24,7 @@ exports.run = async (client, message, args) => {
       );
     message.channel.send(hatali);
   }
+  console.log(`Günlük Komutu Kullanıldı:`+ `${message.guild.name}`)
 };
 
 exports.conf = {

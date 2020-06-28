@@ -14,7 +14,6 @@ const award = ['ödül', 'ödüller', 'award', 'reward', 'prize']
 
 
 exports.run = async (client, msg, args) => {
-  if (msg.channel.name != "muzik-ve-bot-deneme") return console.log('Yanlış kanalda profil komutu!')
     let u = msg.mentions.users.first() || msg.author;
         if(ark.includes(args[0])) {
     if(reset.includes(args[1])) {
@@ -98,10 +97,11 @@ exports.run = async (client, msg, args) => {
 
                 db.set(`${msg.author.id}.resim`, args[1])
                 const embed = new Discord.RichEmbed()
-                        .setAuthor("Resim başarıyla ayarlandı!")
+                        .setAuthor("Resim başarıyla ayarlandı! // Eğer sadece yazı görünüyor resim yoksa doğru linki koymamışsınız demektir!")
                         .setImage(args[1])
                         .setColor("BLACK")
                 msg.channel.send({embed})
+                msg.delete()
                 return
         }
   
@@ -297,8 +297,8 @@ exports.run = async (client, msg, args) => {
   var xp = db.fetch(`puancik_${u.id + msg.guild.id}`);
   var lvl = db.fetch(`seviye_${u.id + msg.guild.id}`);
   var para = db.fetch(`para_${u.id + msg.guild.id}`);
-  var sirketisim = db.fetch(`sirketisim_${u.id}`)
-  var sirkettipi = db.fetch(`sirkettipi_${u.id}`)
+  var sirketisim = db.fetch(`sirketisim_${u.id + msg.guild.id}}`)
+   let sirkettipi = db.fetch(`sirkettipi_${u.id+ msg.guild.id}`);
         
   
   
@@ -352,7 +352,12 @@ exports.run = async (client, msg, args) => {
         ctx.clip();
         ctx.drawImage(avatar, 55, 80, 160, 160);
     
-        msg.channel.send({files:[{attachment:canvas.toBuffer(),name:"seviye.png"}]})
+       try { msg.channel.send({files:[{attachment:canvas.toBuffer(),name:"seviye.png"}]})
+           
+           } catch(e) {
+             msg.channel.send(e)
+             console.log(e)
+           }
         
   
 };

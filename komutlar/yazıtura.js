@@ -30,6 +30,7 @@ exports.run = function(client, message) {
       );
     message.channel.send(embedtura);
   }
+  console.log(`Yazı Tura Komutu Kullanıldı: `+ `${message.guild.name}`)
 };
 
 exports.conf = {

@@ -33,7 +33,6 @@
     "steam": "^1.4.1",
     "csgo": "^1.5.14",
     "simple-youtube-api": "^5.2.1",
-    "ytdl-core": "^2.1.0",
     "node-opus": "^0.2.7",
     "cleverbot.io": "^1.0.4",
     "google-tts-api": "^0.0.4",
@@ -44,6 +43,7 @@
     "text-to-speech-js": "^1.1.9",
     "html": "^1.0.0",
     "consolidate": "^0.15.1",
-    "swig": "^1.4.2"
+    "swig": "^1.4.2",
+    "ytdl-core-discord": "^1.2.0"
   }
 }

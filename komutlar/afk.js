@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const db = require("quick.db");
 
-exports.run = async (client, message, args) => {
+exports.run = async (client, message, args)=> {
   let user = message.author;
   let sebep = args.join(" ");
 
@@ -10,8 +10,8 @@ exports.run = async (client, message, args) => {
   db.set(`nick_${user.id}`, `${message.member.displayName}`);
   db.set(`afk_${user.id}`, sebep);
   message.member.setNickname(`[AFK] ${message.member.displayName}`);
-  message.member.setVoiceChannel("342736290225192972");
   message.channel.send(`Artık \`${sebep}\` sebebiyle AFK'sın.`);
+  console.log(`AFK Komutu Kullanıldı: `+ `${message.guild.name}`)
 };
 
 exports.conf = {

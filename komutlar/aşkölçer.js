@@ -66,7 +66,7 @@ exports.run = async (client, msg, args) => {
     }})
     }
   
-  
+  console.log(`Aşkölçer Komutu Kullanıldı:`+ `${msg.guild.name}`)
   }
   
   exports.conf = {

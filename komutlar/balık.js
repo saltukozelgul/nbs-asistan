@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 const db = require('quick.db')
 
 exports.run = function(bot, message) {
-    if (message.channel.name === 'göl-kenarı')
+    if (message.channel.name === 'göl-kenarı')  // Buradaki kanal ismini balık tutulacak kanal neyse onunla değişin.
     {var para = db.fetch(`para_${message.author.id + message.guild.id}`)
     message.channel.sendEmbed(new Discord.RichEmbed()
     .setColor(message.guild.me.displayHexColor)
@@ -35,6 +35,7 @@ exports.run = function(bot, message) {
           message.channel.send(`Oltanı güzel fırlattın hadi bakalım ne gelecek?`)
           return balik }
     }}
+     console.log(`Balık Komutu Kullanıldı:`+ `${message.guild.name}`)
 }
 else return message.channel.send('Lütfen göl kenarında balık tutunuz bu kanalda değil!')
 }

@@ -6,7 +6,7 @@ const db = require('quick.db')
 
 exports.run = function(client, message) { 
   
-if (message.channel.id === '705117742461878389' || message.channel.id === '708376290201305148' || message.channel.name === 'las-vegas')
+if (message.channel.id === '705117742461878389' || message.channel.id === '708376290201305148' || message.channel.name === 'las-vegas') // Hangi kanalda kullanılmasını istiyorsanız o kanalın adını ya da ID giriniz.
   {  var para = db.fetch(`para_${message.author.id + message.guild.id}`)
 	var slot1 = slots[Math.floor(Math.random() * slots.length)];
 	var slot2 = slots[Math.floor(Math.random() * slots.length)];
@@ -51,6 +51,7 @@ if (message.channel.id === '705117742461878389' || message.channel.id === '70837
 }}
 
   else return message.channel.send('Lütfen slot oyununu Las Vegas dışında bir kanalda oynamayın.')
+  console.log(`Slot Komutu Kullanıldı: `+ `${message.guild.name}`)
 };
 
 exports.conf = {

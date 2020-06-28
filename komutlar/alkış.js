@@ -12,6 +12,7 @@ exports.run = function(client, message, args) {
    */
 
   message.channel.send({embed});
+  console.log(`Alkış Komutu Kullanıldı:`+ `${message.guild.name}`)
 };
 
 exports.conf = {

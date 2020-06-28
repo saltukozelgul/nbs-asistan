@@ -14,7 +14,7 @@ exports.run = function(client, message, args) {
 exports.conf = {
   enabled: true, 
   guildOnly: true, 
-  aliases: ['8ball', 'sence'],
+  aliases: ['sence'],
   permLevel: 0 
 };
 exports.help = {

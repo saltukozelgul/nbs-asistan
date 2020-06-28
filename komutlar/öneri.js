@@ -14,7 +14,7 @@ let embed = new Discord.RichEmbed()
 .addField("Sunucu", guild, true)
 .setColor("#f49542")
 
-message.channel.send(`:white_check_mark:  **| Öneriniz başarıyla iletildi!. \n ${channel}  **`)
+message.channel.send(`:white_check_mark:  **| Öneriniz bot sahibine başarıyla iletildi!. \n ${channel}  **`)
 channel.send(embed).then(i => i.react("⏳"))
 
 
