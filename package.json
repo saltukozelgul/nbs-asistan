@@ -36,8 +36,6 @@
     "steam": "^1.4.1",
     "csgo": "^1.5.14",
     "simple-youtube-api": "^5.2.1",
-    "node-opus": "^0.2.7",
-    "cleverbot.io": "^1.0.4",
     "google-tts-api": "^0.0.4",
     "opusscript": "^0.0.7",
     "ffmpeg": "^0.0.4",
